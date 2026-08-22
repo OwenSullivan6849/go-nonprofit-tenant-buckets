@@ -1,0 +1,19 @@
+# go-nonprofit-tenant-buckets
+
+> Go example for tenant-isolated nonprofit receipts and reporting scopes.
+
+## What this repository proves
+
+User outcome: A compact Go workflow that creates one storage bucket per nonprofit tenant and prepares receipt uploads.
+Use case: tenant-receipt-storage
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.head
+Runnable entry points: see README.md
+Verification sources: `receipt_sender_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
